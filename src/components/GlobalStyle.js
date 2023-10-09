@@ -1,11 +1,2 @@
-import React from 'react'
-
-const GlobalStyle = () => {
-  return (
-    <div>
-      Global page
-    </div>
-  )
-}
-
-export default GlobalStyle
+import { createGlobalStyle } from "styled-components";
+export const GlobalStyle = createGlobalStyle;
