@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -10,6 +10,7 @@ import SingleProduct from "./components/SingleProduct";
 import Errorpage from "./components/Errorpage";
 import { GlobalStyle } from "./components/GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import Header from "./component2/Header";
 
 const App = () => {
   const theme = {
@@ -41,6 +42,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyle />
+          <Header/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
