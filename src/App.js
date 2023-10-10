@@ -38,7 +38,6 @@ const App = () => {
   };
   return (
     <div>
-      <h3>welcome to the Nandani Ecommerce website</h3>
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyle />
