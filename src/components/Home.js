@@ -2,11 +2,14 @@ import React from "react";
 import HeroSection from "../component2/HeroSection";
 
 const Home = () => {
-  return(
+  const data = {
+    name: "Nandani Store",
+  };
+  return (
     <div>
-    <HeroSection/>
+      <HeroSection myData={data} />
     </div>
-  )
+  );
 };
 
 export default Home;
