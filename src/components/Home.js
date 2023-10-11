@@ -1,5 +1,7 @@
 import React from "react";
 import HeroSection from "../component2/HeroSection";
+import Services from "../component2/Services";
+import Trusted from "../component2/Trusted";
 
 const Home = () => {
   const data = {
@@ -8,6 +10,8 @@ const Home = () => {
   return (
     <div>
       <HeroSection myData={data} />
+      <Services />
+      <Trusted />
     </div>
   );
 };
