@@ -6,7 +6,7 @@ import { CgMenu } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 
 const Nav = () => {
-const [menuIcon, setMenuIcon] = useState()
+  const [menuIcon, setMenuIcon] = useState();
 
   const Nav = styled.nav`
     .navbar-lists {
@@ -166,25 +166,41 @@ const [menuIcon, setMenuIcon] = useState()
       <div className={menuIcon ? "navbar active" : "navbar"}>
         <ul className="navbar-lists">
           <li>
-            <NavLink to="/" className="navbar-link" onClick={()=> setMenuIcon(false)}>
+            <NavLink
+              to="/"
+              className="navbar-link"
+              onClick={() => setMenuIcon(false)}
+            >
               Home
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/about" className="navbar-link" onClick={()=> setMenuIcon(true)}>
+            <NavLink
+              to="/about"
+              className="navbar-link"
+              onClick={() => setMenuIcon(true)}
+            >
               About
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/products" className="navbar-link" onClick={()=> setMenuIcon(true)}>
+            <NavLink
+              to="/products"
+              className="navbar-link"
+              onClick={() => setMenuIcon(true)}
+            >
               Products
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contacts" className="navbar-link" onClick={()=> setMenuIcon(true)}>
+            <NavLink
+              to="/contacts"
+              className="navbar-link"
+              onClick={() => setMenuIcon(true)}
+            >
               Contacts
             </NavLink>
           </li>
@@ -196,10 +212,15 @@ const [menuIcon, setMenuIcon] = useState()
             </NavLink>
           </li>
         </ul>
+
         {/*Two buttons for open and close menu*/}
+
         <div className="mobile-navbar-btn"></div>
-        <CgMenu name="menu-outline" className="mobile-nav-icon"
-        onClick={()=> setMenuIcon(true)} />
+        <CgMenu
+          name="menu-outline"
+          className="mobile-nav-icon"
+          onClick={() => setMenuIcon(true)}
+        />
         <CgClose
           name="close-outline"
           className="mobile-nav-icon close-outline"
