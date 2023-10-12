@@ -48,16 +48,15 @@ const Contacts = () => {
             ></iframe>
             <div className="container">
                 <div className="contact-form">
-                    <form action="" method="Post" className="contact-inputs">
+                    <form action="https://formspree.io/f/xgejrapz" method="Post" className="contact-inputs">
                         <input type="text" placeholder="Enter Your Name" name="username" required autoComplete="off"
-                        value="" />
+                        />
 
                         <input type="email"
                             name="Email"
                             placeholder="Enter Your Email"
                             autoComplete="off"
                             required
-                            value=""
                         />
                         <textarea name="Messages" id="" cols="30" rows="10" placeholder="Enter Your Message" required ></textarea>
 
