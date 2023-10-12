@@ -64,6 +64,20 @@ const Footer = () => {
                         <a href="tel:1234567890">+91 1234567890</a>
                     </div>
                 </div>
+
+                {/* Bottom Footer */}
+                <div className="footer-bottom--section">
+                    <hr />
+                    <div className="grid grid-two-column">
+                        <p>
+                        @{new Date().getFullYear()} Nandani Yadav. All Rights Reserved
+                        </p>
+                        <div>
+                    <p>PRIVACY POLICY</p>
+                    <p>TERMS & CONDITIONS</p>
+                    </div>
+                    </div>
+                </div>
             </footer>
         </Wrapper>
     )
