@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Routes, Route,  } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Contact from "./components/Contact";
+import Contacts from "./components/Contacts";
 import About from "./components/About";
 import Cart from "./components/Cart";
 import Product from "./components/Product";
@@ -41,15 +41,15 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyle />
-          <Header/>
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Contacts" element={<Contacts />} />
             <Route path="/About" element={<About />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/GlobalStyle" element={<GlobalStyle />} />
             <Route path="/Home" element={<Home />} />
-            <Route path="Product" element={<Product />} />
+            <Route path="Products" element={<Product />} />
             <Route path="SingleProduct/:id" element={<SingleProduct />} />
             <Route path="*" element={<Errorpage />} />
           </Routes>
