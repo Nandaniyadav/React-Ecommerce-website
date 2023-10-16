@@ -36,6 +36,28 @@ const ProducRecuder = (state, action) => {
         isLoading: false,
         isError: true,
       };
+
+    case "SET_LOADING":
+      return {
+        ...state,
+        isSingleLoding: true,
+      };
+
+    case "SET_SINGLE_PRODUCT":
+      return {
+        ...state,
+        isSingleLoding: false,
+        singleProduct:action.payload,
+      };
+
+
+      case "SET_SINGLE_ERROR":
+      return {
+        ...state,
+        isSingleLoding: false,
+        isError: true,
+      };
+
     default:
       return state;
   }
