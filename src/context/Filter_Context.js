@@ -1,11 +1,28 @@
-import React from 'react'
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { useProductContext } from "./Productcontext";
+import reducer from "../reducer/FilterReducer";
 
-const Filter_Context = () => {
+const FilterContext = createContext();
+const initialState = {
+  filter_products: [],
+  all_products: [],
+};
+
+export const FilterContextProvider = ({ children }) => {
+  const { products } = useProductContext();
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    dispatch({ type: "LOAD_FILTER_PRODUCTS", payload: products });
+  }, [products]);
+
   return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default Filter_Context
+    <FilterContext.Provider value={{ ...state }}>
+      {children}
+    </FilterContext.Provider>
+  );
+};
+export const useFilterContext = () => {
+  return useContext(FilterContext);
+};

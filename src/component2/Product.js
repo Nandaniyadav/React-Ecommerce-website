@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import FormatPrice from '../helpers/FormatPrice';
 
 const Product = (curElem) => {
+
+  
   const { id, name, image, price, category } = curElem;
   return (
     <NavLink to={`/SingleProduct/${id}`}>

@@ -3,23 +3,28 @@ import { styled } from "styled-components";
 import FilterSection from "../component2/FilterSection";
 import Sort from "../component2/Sort";
 import ProductList from "../component2/ProductList";
+import { useFilterContext } from "../context/Filter_Context";
 
 const Product = () => {
-  return <Wrapper>
-    <div className="container grid grid-filter-column">
-      <div>
-        <FilterSection />
+  const { filter_products } = useFilterContext();
+
+  return (
+    <Wrapper>
+      <div className="container grid grid-filter-column">
+        <div>
+          <FilterSection />
+        </div>
+        <section className="product-view--sort">
+          <div className="sort-filter">
+            <Sort />
+          </div>
+          <div className="main-product">
+            <ProductList />
+          </div>
+        </section>
       </div>
-      <section className="product-view--sort">
-        <div className="sort-filter">
-          <Sort />
-        </div>
-        <div className="main-product">
-          <ProductList />
-        </div>
-      </section>
-    </div>
-  </Wrapper>;
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
