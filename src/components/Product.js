@@ -6,7 +6,7 @@ import ProductList from "../component2/ProductList";
 import { useFilterContext } from "../context/Filter_Context";
 
 const Product = () => {
-  const { filter_products } = useFilterContext();
+  // const { filter_products } = useFilterContext();
 
   return (
     <Wrapper>
